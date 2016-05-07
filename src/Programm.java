@@ -3,10 +3,16 @@
  */
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.net.URL;
+
 import javax.swing.Box;
 import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -28,6 +34,7 @@ public class Programm {
 		Font fontButton = new Font("Courier 10 Pitch", 1, 40);
 		Dimension d = new Dimension(60,60);
 		Dimension d2 = new Dimension(300,60);
+
 		
 		JButton button1 = new JButton("1");
 		JButton button2 = new JButton("2");
@@ -46,6 +53,7 @@ public class Programm {
 		JButton buttonFois = new JButton("*");
 		JButton buttonEgal= new JButton("=");
 		JFrame frame = new JFrame("Calculatrice");
+
 		button1.setFont(fontButton);
 		button2.setFont(fontButton);
 		button3.setFont(fontButton);
@@ -149,7 +157,7 @@ public class Programm {
 		frame.setSize(320,320);
 
 		frame.setVisible(true);
-
+		
 		button1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
 				if (choise == 0){
